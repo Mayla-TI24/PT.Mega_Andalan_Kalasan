@@ -345,31 +345,97 @@
           </p>
         </div>
 
-        <a
-          href="https://www.google.com/search?q=Mega+Andalan+Kalasan+kontak"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-red">
-          Informasi Kontak ↗
-        </a>
+        <!-- INFORMASI ALAMAT & KONTAK -->
+        <ul class="contact-info">
+          <li class="contact-address">
+            <a
+              class="contact-link"
+              href="https://www.google.com/maps/search/?api=1&query=Gran+Rubina+Business+Park+Jl.+H.R.+Rasuna+Said+Jakarta+Selatan+12940"
+              target="_blank"
+              rel="noopener noreferrer">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>
+                <small>Alamat</small>
+                Gran Rubina Business Park, Lantai 22C, Komplek Rasuna Epicentrum,
+                Jl. H.R. Rasuna Said, Jakarta Selatan 12940
+              </span>
+            </a>
 
-        <form class="contact-form" id="contactForm">
-          <label for="contactEmail">Email Anda</label>
+            <div class="map-apps">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Gran+Rubina+Business+Park+Jl.+H.R.+Rasuna+Said+Jakarta+Selatan+12940"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="bi bi-google"></i> Google Maps
+              </a>
+              <a
+                href="https://maps.apple.com/?q=Gran%20Rubina%20Business%20Park%2C%20Jl.%20H.R.%20Rasuna%20Said%2C%20Jakarta%20Selatan%2012940"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="bi bi-apple"></i> Apple Maps
+              </a>
+              <a
+                href="https://waze.com/ul?q=Gran%20Rubina%20Business%20Park%20Rasuna%20Said%20Jakarta&navigate=yes"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="bi bi-cursor-fill"></i> Waze
+              </a>
+              <a href="geo:0,0?q=Gran%20Rubina%20Business%20Park%2C%20Jl.%20H.R.%20Rasuna%20Said%2C%20Jakarta%20Selatan%2012940">
+                <i class="bi bi-compass-fill"></i> Aplikasi peta lain
+              </a>
+            </div>
+          </li>
 
-          <div class="contact-form-row">
-            <input
-              type="email"
-              id="contactEmail"
-              name="email"
-              placeholder="Masukkan alamat email Anda"
-              autocomplete="email"
-              required>
+          <li>
+            <a class="contact-link" href="tel:+622183700555">
+              <i class="bi bi-telephone-fill"></i>
+              <span>
+                <small>Telepon</small>
+                (+62) 21 - 83700555
+              </span>
+            </a>
+          </li>
 
-            <button type="submit" class="btn btn-red">Kirim Email</button>
-          </div>
+          <li>
+            <a class="contact-link" href="tel:+622183700335">
+              <i class="bi bi-printer-fill"></i>
+              <span>
+                <small>Fax</small>
+                (+62) 21 - 83700335
+              </span>
+            </a>
+          </li>
 
-          <p id="contactMessage" class="contact-message" aria-live="polite"></p>
-        </form>
+          <li>
+            <a class="contact-link" href="mailto:marketing@mak-techno.com">
+              <i class="bi bi-envelope-fill"></i>
+              <span>
+                <small>Email Pemasaran</small>
+                marketing@mak-techno.com
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a class="contact-link" href="mailto:mak@cbn.net.id">
+              <i class="bi bi-envelope-fill"></i>
+              <span>
+                <small>Email Pemasaran</small>
+                mak@cbn.net.id
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a class="contact-link" href="mailto:export@mak-techno.com">
+              <i class="bi bi-send-fill"></i>
+              <span>
+                <small>Email Ekspor</small>
+                export@mak-techno.com
+              </span>
+            </a>
+          </li>
+        </ul>
 
       </div>
     </section>
@@ -846,22 +912,6 @@
       link.addEventListener("click", function () {
         document.getElementById("navMenu").classList.remove("nav-open");
       });
-    });
-
-    // Form email: validasi saja, belum mengirim email ke server.
-    document.getElementById("contactForm").addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      const emailInput = document.getElementById("contactEmail");
-      const message = document.getElementById("contactMessage");
-
-      if (!emailInput.checkValidity()) {
-        emailInput.reportValidity();
-        return;
-      }
-
-      message.textContent =
-        "Alamat email berhasil divalidasi. Form ini belum mengirim data ke server.";
     });
 
     // Tahun pada footer.

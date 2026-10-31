@@ -1139,3 +1139,106 @@ footer {
     padding: 30px 15px 20px;
   }
 }
+
+/* INFORMASI ALAMAT & KONTAK */
+.contact-info {
+  flex: 0 1 600px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-info li {
+  min-width: 0;
+  margin: 0;
+}
+
+.contact-info .contact-address {
+  grid-column: 1 / -1;
+}
+
+.contact-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #4ea1ff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  transition: color 0.2s;
+}
+
+.contact-link i {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: #4ea1ff;
+  background: rgba(78, 161, 255, 0.12);
+  font-size: 15px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.contact-link small {
+  display: block;
+  color: #9a9a9a;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.contact-link:hover {
+  color: #8cc2ff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-link:hover i {
+  color: #111111;
+  background: #4ea1ff;
+}
+
+.map-apps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 0 46px;
+}
+
+.map-apps a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid #2f4a68;
+  border-radius: 3px;
+  color: #4ea1ff;
+  font-size: 11px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.map-apps a:hover {
+  border-color: #4ea1ff;
+  color: #111111;
+  background: #4ea1ff;
+}
+
+@media (max-width: 680px) {
+  .contact-info {
+    flex: 1 1 auto;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .map-apps {
+    margin-left: 0;
+  }
+}
